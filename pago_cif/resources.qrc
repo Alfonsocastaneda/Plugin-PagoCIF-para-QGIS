@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/Pago_CIF" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

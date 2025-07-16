@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PagoCIFDialogBase</class>
+ <widget class="QDialog" name="PagoCIFDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>433</width>
+    <height>594</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>433</width>
+    <height>331</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Pago CIF</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>411</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Información Territorial</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>20</y>
+      <width>69</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Departamento</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>72</y>
+      <width>69</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Región</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cBDepartamento">
+    <property name="geometry">
+     <rect>
+      <x>89</x>
+      <y>20</y>
+      <width>314</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>14</x>
+      <y>46</y>
+      <width>69</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Municipio</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cBMunicipio">
+    <property name="geometry">
+     <rect>
+      <x>89</x>
+      <y>46</y>
+      <width>314</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lERegion">
+    <property name="geometry">
+     <rect>
+      <x>89</x>
+      <y>72</y>
+      <width>314</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbPDET">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>100</y>
+      <width>130</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Es PDET</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbPNIS">
+    <property name="geometry">
+     <rect>
+      <x>124</x>
+      <y>100</y>
+      <width>130</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Es PNIS</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>411</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Datos de coberturas</string>
+   </property>
+   <widget class="QgsMapLayerComboBox" name="mMCbPlantacion">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>27</y>
+      <width>184</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>185</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Especie</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cBAreaBosque">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>57</y>
+      <width>185</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calcular área de bosque</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cBEtapa">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>150</y>
+      <width>184</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Establecimiento</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mantenimiento 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mantenimiento 2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mantenimiento 3</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mantenimiento 4</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>22</y>
+      <width>185</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Capa de plantación</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>115</y>
+      <width>185</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Densidad</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="dSPDensidad">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>119</y>
+      <width>184</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>UpArrowCursor</cursorShape>
+    </property>
+    <property name="minimum">
+     <number>50</number>
+    </property>
+    <property name="maximum">
+     <number>1000000000</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cBEspecie">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>88</y>
+      <width>184</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>185</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Etapa</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>411</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Áreas</string>
+   </property>
+   <widget class="QLabel" name="lbAreaPlantacion">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>20</y>
+      <width>75</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Área plantación</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbUniBosque">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>52</y>
+      <width>49</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hectáreas</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbUniPlantacion">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>20</y>
+      <width>49</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hectáreas</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbAreaBosque">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>52</y>
+      <width>75</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Área bosque</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lEAreaBosque">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>52</y>
+      <width>177</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lEAreaPlantacion">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>23</y>
+      <width>177</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbUniBosque_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>50</y>
+      <width>49</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hectáreas</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pBAyuda">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>0</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ver ayuda</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>71</x>
+     <y>500</y>
+     <width>51</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PagoCIF</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lePagoCif">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>505</y>
+     <width>261</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBCalcular">
+   <property name="geometry">
+    <rect>
+     <x>127</x>
+     <y>550</y>
+     <width>97</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Calcular</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pBLimpiar">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>550</y>
+     <width>96</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Limpiar</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>411</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Resultado</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsMapLayerComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qgsmaplayercombobox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
